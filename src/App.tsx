@@ -10,7 +10,7 @@ import { CTASection } from './components/CTASection';
 import { Footer } from './components/Footer';
 import { FloatingCTA } from './components/FloatingCTA';
 
-// 👇 novo: uvoz shop bloka (picker + modal)
+//  novo: uvoz shop bloka (picker + modal)
 import ShopSplit from './components/ShopSplit';
 
 function App() {
