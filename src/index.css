@@ -1,0 +1,255 @@
+/* Tailwind Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   CUSTOM FONT - Neuropol
+   ============================================ */
+@font-face {
+  font-family: 'Neuropol';
+  src: url('/fonts/neuropol.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Optimizacija za brže učitavanje */
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+@layer base {
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Body defaults */
+  body {
+    overflow-x: hidden; /* Spreči horizontal scroll */
+    text-rendering: optimizeLegibility;
+  }
+  
+  /* Focus outline za accessibility */
+  *:focus-visible {
+    outline: 2px solid theme('colors.teal.400');
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+/* ============================================
+   COMPONENTS LAYER
+   ============================================ */
+@layer components {
+  /* Neuropol font optimizacija */
+  .font-neuropol {
+    font-family: 'Neuropol', sans-serif;
+    letter-spacing: 0.05em; /* Razmak između slova */
+    line-height: 1.5; /* Vertikalni razmak */
+    overflow: visible; /* Spreči sečenje slova */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  /* Responsive font size za Neuropol naslove */
+  .font-neuropol-heading {
+    @apply font-neuropol;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+  }
+  
+  /* Gradient text helper */
+  .gradient-text {
+    @apply bg-gradient-to-r from-teal-400 to-blue-400 bg-clip-text text-transparent;
+  }
+  
+  /* Glass effect za kartice */
+  .glass-card {
+    @apply bg-gray-900/50 backdrop-blur-xl border border-gray-800/50 rounded-2xl;
+  }
+  
+  /* Button base styles */
+  .btn-primary {
+    @apply bg-gradient-to-r from-teal-500 to-blue-500 hover:from-teal-400 hover:to-blue-400 
+           px-6 py-3 rounded-xl font-semibold text-white 
+           transition-all duration-300 transform hover:scale-105 
+           shadow-lg hover:shadow-teal-500/25;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-800 hover:bg-gray-700 
+           px-6 py-3 rounded-xl font-semibold text-white 
+           transition-all duration-300 border border-gray-700;
+  }
+}
+
+/* ============================================
+   UTILITIES LAYER
+   ============================================ */
+@layer utilities {
+  /* Logo rotation animation */
+  .rotate-360 {
+    transform: rotate(360deg);
+  }
+  
+  /* Negative rotation */
+  .-rotate-360 {
+    transform: rotate(-360deg);
+  }
+  
+  /* Flip animation */
+  .flip-y {
+    transform: rotateY(180deg);
+  }
+  
+  /* Scale animations */
+  .scale-102 {
+    transform: scale(1.02);
+  }
+  
+  /* Text shadow utilities */
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  }
+  
+  .text-shadow-md {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Glow effects */
+  .glow-teal {
+    box-shadow: 0 0 20px rgba(20, 184, 166, 0.4);
+  }
+  
+  .glow-blue {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+  }
+  
+  /* Hide scrollbar ali ostavi funkcionalnost */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Smooth gradient animation */
+  .gradient-animate {
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease infinite;
+  }
+}
+
+/* ============================================
+   KEYFRAME ANIMATIONS
+   ============================================ */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(20, 184, 166, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(20, 184, 166, 0.6);
+  }
+}
+
+/* ============================================
+   RESPONSIVE TYPOGRAPHY
+   ============================================ */
+@media (max-width: 640px) {
+  .font-neuropol {
+    letter-spacing: 0.03em; /* Malo manji razmak na mobilnom */
+  }
+}
+
+/* ============================================
+   PRINT STYLES (opciono)
+   ============================================ */
+@media print {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .gradient-text {
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    color: black;
+  }
+}
+
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+
+/* GPU acceleration za animacije */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* Optimize images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Lazy loading support */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}

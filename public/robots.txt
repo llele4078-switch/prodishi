@@ -1,0 +1,97 @@
+# PRO.DISHI Robots.txt - Optimized for Search Engines
+# Domain: https://prodishi.rs
+# Last Updated: 2025-10-09
+
+# Google Bots (highest priority)
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Mobile
+Allow: /
+Crawl-delay: 0
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Yahoo
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+# Yandex
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
+
+# Social media crawlers (critical for link previews)
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Facebot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+User-agent: InstagramBot
+Allow: /
+
+# Pinterest
+User-agent: Pinterest
+Allow: /
+
+# Default rule for all other bots
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+# Disallow unnecessary files and folders
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /.git/
+Disallow: /*.json$
+Disallow: /*.config.js$
+Disallow: /*.config.ts$
+Disallow: /package*.json$
+
+# Allow important files
+Allow: /images/
+Allow: /assets/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.webp$
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.svg$
+
+# XML Sitemap location
+Sitemap: https://prodishi.rs/sitemap.xml
+
+# Host directive (helps some search engines)
+Host: https://prodishi.rs

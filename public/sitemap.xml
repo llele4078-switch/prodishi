@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Homepage - Najviši prioritet -->
+  <url>
+    <loc>https://prodishi.rs/</loc>
+    <lastmod>2025-10-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    
+    <!-- Slike za Homepage -->
+    <image:image>
+      <image:loc>https://prodishi.rs/images/ikonica.png</image:loc>
+      <image:title>PRO.DISHI Logo - Nosni Proširivači</image:title>
+      <image:caption>PRO.DISHI logo - revolucija u disanju</image:caption>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://i.imgur.com/BpdYf6Y.jpeg</image:loc>
+      <image:title>PRO.DISHI - Pre i posle korišćenja</image:title>
+      <image:caption>Vidljiva razlika u disanju pre i posle PRO.DISHI</image:caption>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://prodishi.rs/images/before.webp</image:loc>
+      <image:title>PRO.DISHI - Pre korišćenja</image:title>
+      <image:caption>Zateženo disanje pre PRO.DISHI</image:caption>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://prodishi.rs/images/after.webp</image:loc>
+      <image:title>PRO.DISHI - Posle korišćenja</image:title>
+      <image:caption>Bolje disanje posle PRO.DISHI</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Sekcija: Prednosti -->
+  <url>
+    <loc>https://prodishi.rs/#benefits</loc>
+    <lastmod>2025-10-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Sekcija: Proizvod -->
+  <url>
+    <loc>https://prodishi.rs/#product</loc>
+    <lastmod>2025-10-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    
+    <image:image>
+      <image:loc>https://prodishi.rs/images/start-kit-preview.webp</image:loc>
+      <image:title>PRO.DISHI Starter Kit - Kompletan paket</image:title>
+      <image:caption>Starter kit sa nosnim proširivačima i dodacima</image:caption>
+    </image:image>
+    
+    <image:image>
+      <image:loc>https://prodishi.rs/images/sticker-only-preview.webp</image:loc>
+      <image:title>PRO.DISHI Stikeri - Dopuna</image:title>
+      <image:caption>Dodatni stikeri za produženu upotrebu</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Sekcija: Kako radi -->
+  <url>
+    <loc>https://prodishi.rs/#kako-radi</loc>
+    <lastmod>2025-10-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  
+  <!-- Sekcija: Poručivanje (Shop/Order) - Visok prioritet za konverziju -->
+  <url>
+    <loc>https://prodishi.rs/#order</loc>
+    <lastmod>2025-10-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
+</urlset>
