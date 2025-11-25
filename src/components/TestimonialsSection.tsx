@@ -48,7 +48,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ scroll
       role: 'Trener',
       image: 'https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop',
       rating: 5,
-      text: 'Devijacija nosne pregrade me je ograničavala godinama. Sa PRO.DISHI mogu da dišem kroz oba nosna otvora. Moji treninzi su drastično bolji!',
+      text: 'Devijacija nosne pregrade me je ograničavala GODINAMA. Sa PRO.DISHI mogu da dišem kroz oba nosna otvora. Moji treninzi su drastično bolji!',
       result: '+25% kapacitet'
     }
   ];
